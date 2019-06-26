@@ -1,0 +1,137 @@
+body {
+  background-color: black;
+  position: relative;
+  margin: 0;
+  padding: o;
+}
+
+.items {
+  position: absolute;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  will-change: transform;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  height: 550px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+
+.items.active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  opacity: 0.5;
+}
+
+.items.active .item {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  will-change: transform;
+}
+
+.items.active .item .inner {
+  -webkit-transform: scale(1.75);
+          transform: scale(1.75);
+}
+
+.items.active .item .inner-frame {
+  overflow: hidden;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.item {
+  display: inline-block;
+  background: none;
+  height: 100%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  color: red;
+}
+
+.odd {
+  height: 250px;
+}
+
+.even {
+  height: 350px;
+}
+
+.third {
+  height: 450px;
+}
+
+.inner-frame {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  overflow: hidden;
+}
+
+.pointer {
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 1px solid white;
+  border-radius: 50%;
+  pointer-events: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.container {
+  position: relative;
+  margin: 0;
+  padding: o;
+}
+
+.text-photo {
+  margin: 0;
+  padding: 5px;
+}
+
+#text {
+  color: white;
+  font-size: 450px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 50%;
+  z-index: 0;
+  opacity: 0;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+/*# sourceMappingURL=style.css.map */

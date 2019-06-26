@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>SlideShow JavaScript</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <img src="p1.jpg" style="width:100% ;" class="img1 slides">
+        <img src="p2.jpg" style="width:100% ;" class="img2 slides">
+        <img src="p3.jpg" style="width:100% ;" class="img3 slides">
+        <img src="p4.jpg" style="width:100% ;" class="img4 slides">
+        <img src="p5.jpg" style="width:100% ;" class="img5 slides">
+        <img src="p6.jpg" style="width:100% ;" class="img6 slides">
+
+        <button class="leftButton" onclick="leftButtonClicked()">&#10094;</button>
+        <button class="rightButton" onclick="rightButtonClicked()">&#10095;</button>
+
+    </div>
+    <div style="text-align:center">
+        <button class="dot" id="dot1" onclick="dotClicked(1)"></button>
+        <button class="dot" id="dot2" onclick="dotClicked(2)"></button>
+        <button class="dot" id="dot3" onclick="dotClicked(3)"></button>
+        <button class="dot" id="dot4" onclick="dotClicked(4)"></button>
+        <button class="dot" id="dot5" onclick="dotClicked(5)"></button>
+        <button class="dot" id="dot6" onclick="dotClicked(6)"></button>
+    </div>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

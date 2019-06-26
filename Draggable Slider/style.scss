@@ -1,0 +1,119 @@
+body {
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    margin: 0;
+    padding: o;
+}
+
+.items {
+    position: absolute;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all 1s;
+    transform: scale(0.98);
+    will-change: transform;
+    user-select: none;
+    cursor: grabbing;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.items.active {
+    cursor: grabbing;
+    opacity: 0.5;
+    .item {
+        transform: scale(0.9);
+        will-change: transform;
+        .inner {
+            transform: scale(1.75)
+        }
+        .inner-frame {
+            overflow: hidden;
+            transition: all 1s;
+        }
+    }
+}
+
+.item {
+    display: inline-block;
+    background: none;
+    // margin: 2em 1em;
+    height: 100%;
+    transition: all 1s;
+    color: red;
+}
+
+.odd {
+    height: 250px;
+}
+
+.even {
+    height: 350px;
+}
+
+.third {
+    height: 450px;
+}
+
+.inner-frame {
+    transform: scale(1);
+    transition: all 2s;
+    overflow: hidden;
+}
+
+// body::after {
+//     content: 'Text';
+//     height: 100vh;
+//     width: 90vw;
+//     background-color: white;
+//     
+//     display: block;
+//     top: 0;
+//     opacity: 0;
+// }
+.pointer {
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    pointer-events: none;
+    box-sizing: border-box;
+    transition: 0.1s;
+}
+
+.container {
+    position: relative;
+    margin: 0;
+    padding: o;
+}
+
+.text-photo {
+    margin: 0;
+    padding: 5px;
+}
+
+#text {
+    color: white;
+    font-size: 450px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    z-index: 0;
+    opacity: 0;
+    transition: all 0.8s;
+}
